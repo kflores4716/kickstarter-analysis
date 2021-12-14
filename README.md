@@ -15,5 +15,6 @@ To determine the outcomes of these campaigns based on their launch date, I creat
 3. Canceled
 
 See a copy of the table below:
+
 ![Theater_Outcomes_vs_Launch_Table](https://user-images.githubusercontent.com/94764735/145914087-528350e4-5eb7-450d-a579-0f3beba80985.png)
 
