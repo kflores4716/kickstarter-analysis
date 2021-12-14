@@ -13,4 +13,6 @@ To determine the outcomes of these campaigns based on their launch date, I creat
 1. Successful
 2. Failed
 3. Canceled
+See a copy of the table below:
+![Theater_Outcomes_vs_Launch_Table](path/to/Theater_Outcomes_vs_Launch_Table.png)
 
