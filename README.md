@@ -18,3 +18,6 @@ See a copy of the table below:
 
 ![Theater_Outcomes_vs_Launch_Table](https://user-images.githubusercontent.com/94764735/145914087-528350e4-5eb7-450d-a579-0f3beba80985.png)
 
+Using this pivot table, I then created a line chart to display the outcomes in a different manner. Graphing the data can allow for a quicker and easier visualization of the outcomes of these campaigns based on the months they are launched. Please see below:
+
+![Theater_Outcomes_vs_Launch](https://user-images.githubusercontent.com/94764735/145914204-0e0b0dd5-3125-4fe7-8bc8-58562a96e59e.png)
