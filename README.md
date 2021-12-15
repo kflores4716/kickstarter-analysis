@@ -41,4 +41,21 @@ Analyzing the Campaign outcomes based on launch date was the easier of the two a
 
 ![Theater_Outcomes_vs_Launch_Incorrect_Chart](https://user-images.githubusercontent.com/94764735/146099514-4010e080-181d-4c12-b625-3ebaa982623a.png)
 
-As you can see, the chart on the left is much easier to read than that on the right. Thus, the table listing the outcomes as columns and dates as rows is what was used as the final product.
+As you can see, the chart on top is much easier to read than that on the bottom. Thus, listing the outcomes as columns and dates as rows is what was used as the final product.
+
+The analysis of outcomes based on goals was more involved, and as a result there was more room for error. Using the `COUNTIFS` function can be tricky because you are referencing multiple categories of data that each have their respective criteria to meet. If the categories and their respective criteria aren’t typed using the proper grammar and punctuation, it will impact the data in the table as well as the resulting line chart. 
+
+When I first created my data table, I did not type all criteria in my `COUNTIFS` function properly. I was using the “>=” connotation for the lower bound goal range criteria, listing the exact lower bound number from column one. However, for the upper bound goal range, I used “<=” but didn’t use the exact upper bound number. Instead, I was using the lower bound goal from the proceeding range. For example, for the second range I used 1000 and 5000 as the bounds rather than 1000 and 4999. This meant that the upper bound was including the campaigns with a goal of 5000, when those were only supposed to be included in the next range of campaign goals.
+
+At first, I didn’t realize my mistake because the data table didn’t return any errors and appeared to be correct at first glance. However, when I created the Line Chart, I could see that my data points were a bit larger than they should be. Now that I had realized the data points were incorrect, I took another look at my `COUNTIFS` functions and was able to locate my mistake and correct it. 
+
+## Results
+
+- What are two conclusions you can draw about the Outcomes based on Launch Date?
+
+1. Theater campaigns are more likely to succeed if they are launched between April and August.
+2. The worst time to launch a theater campaign is in December, as the number of successful and number of failed outcomes are nearly the same in that month (37 vs 35).  
+
+- What can you conclude about the Outcomes based on Goals?
+
+1. Most of these play campaigns have a funding goal of less than $10,000, and the majority of those campaigns are successful. As the funding goals increase, the percentage of successful campaigns begins to decrease. So, if you want your campaign to succeed, it is in your best interest to start with a funding goal that’s on the smaller end.
