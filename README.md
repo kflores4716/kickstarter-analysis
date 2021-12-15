@@ -59,3 +59,21 @@ At first, I didn’t realize my mistake because the data table didn’t return a
 - What can you conclude about the Outcomes based on Goals?
 
 1. Most of these play campaigns have a funding goal of less than $10,000, and the majority of those campaigns are successful. As the funding goals increase, the percentage of successful campaigns begins to decrease. So, if you want your campaign to succeed, it is in your best interest to start with a funding goal that’s on the smaller end.
+
+- What are some limitations of this dataset?
+
+    - These campaigns span across several countries who have their own currencies. If we were to consider exchange rates, many of the funding goal and funding pledged amounts         would be different than what the table lists.
+
+    - The data doesn’t show us what is being done to attract backers and funding. The number of backers and amount of funding can impact the eventual success (or failure) of the       campaign.
+
+    - We aren’t given any information on how these campaigns are being marketed to the public. Marketing almost always has an impact on the success of a new product (or in this       case, theater campaign).
+
+- What are some other possible tables and/or graphs that we could create?
+
+    - We could create a table and graph comparing the amount of pledged funding to the campaign outcomes to see if that pledged amount impacts the success of a campaign.
+
+    - We could also create a table and graph comparing the number of backers to the campaign outcomes, again to see if it impacts a campaign’s success.
+
+    - If the number of backers and pledged amount do correlate with the success of a campaign, we could go even further to see what might impact those two factors. We could          compare each of them (with tables and graphs) to the funding goals and determine if those funding goals affect their outcomes. With this new data, we could have a deeper        understanding as to why a campaign’s funding goal impacted its outcome.
+
+    - Additionally, we could draw a comparison between funding goals and launch dates as well, since we already have tables and graphs showing how they impact a campaign’s            outcome. It would take some time, but we could make 12 copies of the COUNTIFS table we created for funding goals. Then, in each table we could add another criteria to            further separate the data by months. Finally, once we have the new tables, we could create graphs for each one. With our new data, could determine what time of year a            campaign should launch based on its funding goal.
