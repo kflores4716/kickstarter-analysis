@@ -62,16 +62,16 @@ I did actually make one other error, although I believe it actually may have hel
 
 - What are two conclusions you can draw about the Outcomes based on Launch Date?
 
-1. Theater campaigns are more likely to succeed if they are launched between April and August.
-2. The worst time to launch a theater campaign is in December, as the number of successful and number of failed outcomes are nearly the same in that month (37 vs 35).  
+1. Theater campaigns have the highest chance of success when launched in the middle of the year. The two months with the highest success rates are May and June, so that might be a good time frame to aim for.
+2. You should avoid launching a theater campaign in December. Only 37 of the 75 campaigns in December were successful. This is the only month where the success rate is below 50%.
 
 - What can you conclude about the Outcomes based on Goals?
 
-1. Most of these play campaigns have a funding goal of less than $10,000, and the majority of those campaigns are successful. As the funding goals increase, the percentage of successful campaigns begins to decrease. So, if you want your campaign to succeed, it is in your best interest to start with a funding goal that’s on the smaller end.
+1. Most of these play campaigns have a funding goal of less than $10,000, and the majority of those campaigns are successful. As the funding goals increase, the percentage of successful campaigns begins to decrease. So, if you want your campaign to succeed, it is in your best interest to start with a funding goal that’s on the small side.
 
 - What are some limitations of this dataset?
 
-    - These campaigns span across several countries who have their own currencies. If we were to consider exchange rates, many of the funding goal and funding pledged amounts         would be different than what the table lists.
+    - These campaigns span across several countries who have their own currencies. If we were to consider exchange rates, many of the funding goal and funding pledged amounts         would be different than what the table lists. In addition, those different countries may have different preferences as a whole. So, some of these campaigns might succeed         just because the country they're in likes all theater, and some might fail just because their country is more critical of new shows or perhaps just doesn't like theater in       general.
 
     - The data doesn’t show us what is being done to attract backers and funding. The number of backers and amount of funding can impact the eventual success (or failure) of the       campaign.
 
