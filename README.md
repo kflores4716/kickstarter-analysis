@@ -9,7 +9,7 @@ The two analyses were created in Microsoft Excel using the larger data set conta
 1. Outcomes Based on Launch Date
 2. Outcomes Based on Goals
 ### Analysis of Outcomes Based on Launch Date
-To determine the outcomes of these campaigns based on their launch date, I created a `Pivot Table` and accompanying `Line Chart` in a new worksheet. The first column of the table filters the campaigns based on the month of the year that they launched. To further label that first column, I dragged the "Date Created Conversion" field to the "Rows" section, which populated the column with the 12 months of the year. For the "Columns" section, I dragged in the "Outcomes" field as this split the outcomes into their three respective categories, each in a separate column. I only want to see Theater campaigns, so I used the “Parent Category” field as a "Filter" which lets the table show only the categories that I tell it to show. Finally, to populate the table with the count of the theater outcomes, I used the "Outcomes" field again in my "Values" section.
+To determine the outcomes of these campaigns based on their launch date, I created a `Pivot Table` and accompanying `Line Chart` in a new worksheet. The first column of the table filters the campaigns based on the month of the year that they launched. To label that first column, I dragged the "Date Created Conversion" field to the "Rows" section, which populated the column with the 12 months of the year. For the "Columns" section, I dragged in the "Outcomes" field as this split the outcomes into their three respective categories, each in a separate column. I only want to see Theater campaigns, so I used the “Parent Category” field as a "Filter" which lets the table show only the categories that I tell it to. Finally, to populate the table with the count of the theater outcomes, I used the "Outcomes" field again in my "Values" section.
 
 See a copy of the table below:
 
@@ -26,7 +26,13 @@ Graphing the data provides a more vizual interpretation of the table I just crea
 ### Analysis of Outcomes Based on Goals
 I analyzed campaigns based on funding goals using a different approach than what I used for my launch date analysis. When analyzing the outcomes by launch date, it was easy to filter the data by months as that information was already included in the Kickstarter data set. For this analysis, goal amounts weren’t already separated into specific ranges, so I couldn’t use the `Pivot Table` function to categorize the goal outcomes. Instead, I had to create my own table from scratch so that I could split up the outcomes into different ranges. This way, I could properly determine the impact campaign goals had. 
 
-The first step I took was to create a column splitting up the goals into 12 price ranges (just like the 12 months in the last analysis). I then created 7 more columns to hold the individual counts, total count, and percentages of all three campaign outcomes. To get the count of outcomes based on my goal ranges, I used the `COUNTIFS` function. Referencing the Kickstarter worksheet, I added `COUNTIFS` criteria to only return outcomes within those specific ranges. Here is an example of a cell with the proper `COUNTIFS` entry:  `=COUNTIFS(Kickstarter!$F$2:$F$4115,"successful",Kickstarter!$D$2:$D$4115,"<1000",Kickstarter!$R$2:$R$4115,"plays")`. Once I had the count of all three outcomes, I totaled them up in the next column to use for my percentage calculation. I just used a simple division symbol to display my percentages in the next three columns.
+The first step I took was to create a column splitting up the goals into 12 price ranges (just like the 12 months in the last analysis). I then created 7 more columns to hold the individual counts, total count, and percentages of all three campaign outcomes. To get the count of outcomes based on my goal ranges, I used the `COUNTIFS` function. Referencing the Kickstarter worksheet, I added `COUNTIFS` criteria to only return outcomes within my ranges. 
+
+Here is an example of a cell with the proper `COUNTIFS` entry:  
+
+`=COUNTIFS(Kickstarter!$F$2:$F$4115,"successful",Kickstarter!$D$2:$D$4115,"<1000",Kickstarter!$R$2:$R$4115,"plays")`. 
+
+Once I had the count of all three outcomes, I totaled them up in column four. Then, I just used a simple division symbol to calculate my percentages in the next three columns.
 
 See below for an image of my table's end result:
 
@@ -40,7 +46,7 @@ See below for an image of my table's end result:
 
 #### **Theater Outcomes by Launch Date**
 
-This analysis was the easier of the two that I performed. As I mentioned earlier, we already had the launch dates in our original data set, so I was able to use the `Pivot Table` function to split up the dates by month. One possible challenge here is that your launch dates may be grouped by more than just months (e.g. quarters, years, etc.). To change this, you need to right click one of the date cells and select "Group". From there, you get a list of all the ways to group the data, and you need to make sure that the only group selected is "Months". When you click "okay," your table will then display the data as intended.
+This analysis was the easier of the two that I performed. As I mentioned earlier, we already had the launch dates in our original data set, so I was able to use the `Pivot Table` function to split up the dates by month. One possible challenge here is that your launch dates may be grouped by more than just months (e.g. quarters, years, etc.). To change this, you need to right click one of the date cells and select "Group". From there, you get a list of all the ways to group the data, and you need to make sure that the only group selected is "Months". When you click "okay" your table will then display the data as intended.
 
 Perhaps the biggest challenge was making sure to create the `Pivot Table` properly so that the `Line Chart` I eventually created was easy to interpret. The table itself can clearly display the data in two ways. Whether the outcomes are listed by column and the dates by row or vice versa, the end results can be identified without issue. See below for an image of each:
 
@@ -58,13 +64,13 @@ Notice that there are only three lines in this chart, one for each outcome. Thus
 
 While the first chart had three lines, this second chart has twelve, one for each month of the year. Having too many lines makes for a messier chart, and a messy chart can be hard to interpret. If you look at the "failed" and "canceled" outcomes in this chart, the lines are so close together that you can barely tell which line is which.
 
-Clearly, the chart on top is much easier to read than that on the bottom. As I mentioned before, graphs are created to provide a quicker and easier interpretation of large data tables, but with the second line chart that isn't really the case. Thus, I used the first table as my end result since it's accompanying chart was the better of the two.
+Clearly, the chart on top is much easier to read than that on the bottom. As I mentioned before, graphs should provide a quicker and easier interpretation of large data tables, but with the second line chart that isn't really the case. Thus, I used the first table as my end result since it's accompanying chart was the better of the two.
 
 #### **Outcomes Based on Goals**
 
-This analysis was more involved, and as a result there was more room for error. Using the `COUNTIFS` function can be tricky because you are referencing multiple categories of data that each have their respective criteria to meet. If the categories and their criteria aren’t typed using the proper spelling and punctuation, the data in the table will not display the figures you are intending to. This can be especially annoying because you won't get an error message, so if you aren't careful you can create a whole table and not even realize that the data is wrong. As a matter of fact, this happened to me the first time I created my goals table.
+This analysis was more involved, and as a result there was more room for error. Using the `COUNTIFS` function can be tricky because you are referencing multiple categories of data that each have their respective criteria to meet. If the categories and their criteria aren’t typed using the proper spelling and punctuation, the data in the table will not display the figures you are intending to display. This can be especially annoying because often times you won't get an error message, so if you aren't careful you can create a whole table and not even realize that the data is wrong. As a matter of fact, this happened to me the first time I created my goals table.
 
-When I first created my data table, I did not type all criteria in my `COUNTIFS` function properly. I was using the “>=” connotation for the lower bound goal range criteria, listing the exact lower bound number from column one. However, for the upper bound goal range, I was using “<=" but typed the lower bound goal from the proceeding range. For example, for the second range I used 1000 and 5000 as the bounds rather than 1000 and 4999. In my mind, I thought I would save some typing and just use "<" along with the next lower bound. If I typed it correctly, this would have worked just fine. This is actually how I created my table in the end, but as I said I used "<=" and not "<". My error meant that my goal counts included some of the goals from the next range, so the resulting data in my table was throwing off my whole analysis.
+When I first created my data table, I did not type all criteria in my `COUNTIFS` function properly. I was using the “>=” connotation for the lower bound goal range criteria, listing the exact lower bound number from column one. However, for the upper bound goal range, I was using “<=" but typed the lower bound goal from the proceeding range. For example, for the second range I used 1000 and 5000 as the bounds rather than 1000 and 4999. In my mind, I thought I would save some typing and just use "<" along with the lower bound from the next row. If I typed it correctly, this would have worked just fine. In fact, this is how I created my table in the end, but as I said I used "<=" and not "<". My error meant that my goal counts included some of the goals from the next range, so the resulting data in my table was throwing off my whole analysis.
 
 At first, I didn’t realize my mistake because the data table didn’t return any errors and appeared to be correct. However, when I created my chart I had a feeling that something was off. I added up my "Total Projects" column to make sure I was including all projects, and thats when I realized that I had definitely made a mistake. So, I took another look at my `COUNTIFS` functions and pretty quickly was able to locate that mistake and correct it. 
 
@@ -74,14 +80,15 @@ I did actually make one other error, although I believe it actually may have hel
 
 - What are two conclusions you can draw about the Outcomes based on Launch Date?
 
-1. Theater campaigns have the highest chance of success when launched in the middle of the year. The two months with the highest success rates are May and June, so that might be a good time frame to aim for.
-2. You should avoid launching a theater campaign in December. Only 37 of the 75 campaigns in December were successful, making it the only month where the success rate is below 50%.
+    1. Theater campaigns have the highest chance of success when launched in the middle of the year. The two months with the highest success rates are May and June, so that            might be a good time frame to aim for.
+    
+    2. You might want to avoid launching a theater campaign in December. Only 37 of the 75 campaigns in December were successful, making it the only month where the success rate        is below 50%.
 
 - What can you conclude about the Outcomes based on Goals?
 
-1. Most of these play campaigns have a funding goal of less than $10,000, and the majority of those campaigns are successful. As the funding goals increase, the percentage of successful campaigns begins to decrease. So, if you want your campaign to succeed, it is in your best interest to start with a funding goal that’s on the small side. 
+    1. Most of these play campaigns have a funding goal of less than $10,000, and the majority of those campaigns are successful. As the funding goals increase, the percentage          of successful campaigns begins to decrease. So, if you want your campaign to succeed, it is in your best interest to start with a funding goal that’s on the small side. 
 
-    - I notice that there is an exception for goals between $35,000 and $45,000 where the success rate is 67%. However, there were only 9 total campaigns in that goal range           while there were hundreds in the ranges $10,000 and below. Thus, those lower-end success rates are much more comprehensive than the 35k to 45k ones; therefore, I can't           say with confidence that a campaign will have equal success with a goal in either range.
+      - I notice that there is an exception for goals between $35,000 and $45,000 where the success rate is 67%. However, there were only 9 total campaigns in that goal range           while there were hundreds in the ranges $10,000 and below. Thus, those lower-end success rates are much more comprehensive than the 35k to 45k ones; therefore, I can't           say with confidence that a campaign will have equal success with a goal in either range.
 
 - What are some limitations of this dataset?
 
